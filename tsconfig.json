@@ -1,29 +1,21 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
     "baseUrl": "./",
-    "paths": {
-      "@/*": ["src/*"]
-    },
-    "target": "es2017", // es5ではなく、es2017を対象とします。NestJSはes2017を推奨しています。
-    "lib": ["es2017", "esnext.asynciterable"], // ライブラリオプションをes2017とesnext.asynciterableに設定します。
-    "module": "commonjs", // NestJSはcommonjsを使用します。
-    "declaration": true, // 型定義ファイル(.d.ts)を生成します。
-    "sourceMap": true, // ソースマップを有効にします。これによりデバッグが容易になります。
-    "outDir": "./dist", // コンパイルしたJavaScriptファイルの出力ディレクトリを指定します。
-    "strict": true,
-    "esModuleInterop": true,
+    "incremental": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": false, // ソースコードをコンパイルしてJavaScriptファイルを出力します。
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "removeComments": true, // コンパイル時にコメントを削除します。これにより生成されるJavaScriptファイルのサイズが小さくなります。
-    "incremental": true
-  },
-  "exclude": ["node_modules", "dist"], // distディレクトリも除外します。
-  "include": ["src"] // NestJSのソースコードは通常srcディレクトリに配置します。
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false
+  }
 }
